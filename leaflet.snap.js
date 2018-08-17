@@ -191,6 +191,9 @@ L.Snap.updateSnap = function (marker, layer, latlng) {
             }
             marker.fire('snap', {layer:layer, latlng: latlng});
         }
+        else {
+            marker.fire('snap', {layer:layer, latlng: latlng});
+        }
     }
     else {
         if (marker.snap) {
