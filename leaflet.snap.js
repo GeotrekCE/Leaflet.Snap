@@ -189,11 +189,8 @@ L.Snap.updateSnap = function (marker, layer, latlng) {
             if (marker._icon) {
                 L.DomUtil.addClass(marker._icon, 'marker-snapped');
             }
-            marker.fire('snap', {layer:layer, latlng: latlng});
         }
-        else {
-            marker.fire('snap', {layer:layer, latlng: latlng});
-        }
+        marker.fire('snap', {layer:layer, latlng: latlng});
     }
     else {
         if (marker.snap) {
