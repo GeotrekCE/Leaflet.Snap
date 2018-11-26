@@ -112,8 +112,8 @@ L.Handler.MarkerSnap = L.Handler.extend({
             if (marker.snap != layer) {
                 marker.snap = layer;
                 if (marker._icon) L.DomUtil.addClass(marker._icon, 'marker-snapped');
-                marker.fire('snap', {layer:layer, latlng: latlng});
             }
+            marker.fire('snap', {layer:layer, latlng: latlng});
         }
         else {
             if (marker.snap) {
@@ -126,7 +126,7 @@ L.Handler.MarkerSnap = L.Handler.extend({
 });
 
 
-if (!L.Edit.Poly) {
+if (!L.Edit) {
     // Leaflet.Draw not available.
     return;
 }
